@@ -2,13 +2,15 @@ package ch06
 
 fun main() {
     val email: String? = getEmail()
-    sendMailTo(email ?: "")
+    email?.let { sendMailTo(it) }
 }
 
 fun sendMailTo(email: String) {
-
+    email.isNullOrBlank()
+    email.isNullOrBlank()
+    println("mail sent")
 }
 
-fun getEmail(): String {
-    return ""
+fun getEmail(): String? {
+    return null
 }

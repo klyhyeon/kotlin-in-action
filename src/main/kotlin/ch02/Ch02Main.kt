@@ -12,6 +12,23 @@ fun main() {
   for ((index, value) in list.withIndex()) {
     println("$index: $value")
   }
+
+  // val 할당하기
+  val str: String
+  if (list.isNullOrEmpty()) {
+    str = "is empty"
+  } else {
+    str = "not empty"
+  }
+
+  println(str)
+
+  val person = Person(
+    name = "유현",
+    false,
+  )
+  println("name: ${person.name}")
+  println("is married: ${person.isMarried}")
 }
 
 fun max(a: Int, b: Int) = if (a > b) a else b
