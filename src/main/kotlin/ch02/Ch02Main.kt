@@ -29,6 +29,12 @@ fun main() {
   )
   println("name: ${person.name}")
   println("is married: ${person.isMarried}")
+
+  val notMarriedCouples = listOf(Person("yuhyeon", false), Person("jiwoo", false))
+
+  val byLastName = notMarriedCouples.associateBy { it.name }
+
+  println(byLastName)
 }
 
 fun max(a: Int, b: Int) = if (a > b) a else b
