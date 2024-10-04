@@ -3,6 +3,8 @@ package ch02
 import ch02.createRandomRectangle
 
 fun main() {
+  println(Color.RED.rgb())
+
   println(max(1, 2))
 
   //다른 패키지 함수 import 하기
