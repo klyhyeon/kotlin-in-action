@@ -3,7 +3,17 @@ package ch02
 import ch02.createRandomRectangle
 
 fun main() {
-    println(eval(Sum(Sum(Num(1), Num(2)), Num(4))))
+//    for (i in 0..100) {
+//        println(fizzBuzz(i))
+//    }
+//    for (i in 100 downTo 1 step 2) {
+//        println(fizzBuzz(i))
+//    }
+    for ((alphabet, alphabet2) in mapOf("A" to "B")) {
+        println("$alphabet + $alphabet2")
+    }
+//    iteration()
+//    println(eval(Sum(Sum(Num(1), Num(2)), Num(4))))
 //  println(Color.RED.rgb())
 //
 //  println(max(1, 2))
@@ -69,3 +79,16 @@ fun eval(e: Expr): Int {
     }
 }
 
+fun iteration() {
+    val rangeOneToTen = 1..10
+    for (x in rangeOneToTen) {
+        println(x)
+    }
+}
+
+fun fizzBuzz(i: Int) = when {
+    i % 15 == 0 -> "FizzBuzz"
+    i % 3 == 0 -> "Fizz"
+    i % 5 == 0 -> "Buzz"
+    else -> "$i"
+}
