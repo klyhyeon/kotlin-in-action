@@ -9,16 +9,20 @@ fun main() {
 
   val char = "Kotlin".lc()
 
-  print(listOf("1", "2").join())
+  Ch03User(id = "1", name = "").validateByName()
 
-  println("12.456".split('.'))
+  listToString()
+
+//  print(listOf("1", "2").join())
+
+//  println("12.456".split('.'))
 
   val path = "path/to/dir/filename.txt"
   val regex = """(.+)/(.+)\.(.+)""".toRegex()
   val matchResult = regex.matchEntire(path)
   if (matchResult != null) {
     val (directory, filename, extension) = matchResult.destructured
-    println("directory: $directory , filename: $filename , extension: $extension")
+//    println("directory: $directory , filename: $filename , extension: $extension")
   }
 }
 
@@ -48,3 +52,9 @@ fun Collection<String>.join(
   prefix: String = "",
   postfix: String = "",
 ) = joinToString(separator, prefix, postfix)
+
+
+fun mapInfix() {
+  val map = mapOf(1 to "one", 2 to "two") // infix call. Instead of 1.to("one")
+  val (number, name) = 1 to "one"
+}

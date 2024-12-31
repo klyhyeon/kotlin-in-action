@@ -64,6 +64,8 @@ class Num(
 ) : Expr
 
 fun eval(e: Expr): Int {
+    val emptyList = emptyList<String>()
+    val isIn = "2" !in emptyList
     // java style code
 //    if (e is Num) {
 //        return e.value
