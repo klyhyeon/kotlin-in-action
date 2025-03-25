@@ -1,6 +1,7 @@
 package ch02
 
 import ch02.createRandomRectangle
+import java.util.Collections.emptyList
 
 fun main() {
 //    for (i in 0..100) {
