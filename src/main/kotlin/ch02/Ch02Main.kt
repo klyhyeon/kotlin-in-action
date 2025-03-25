@@ -1,9 +1,9 @@
 package ch02
 
-import ch02.createRandomRectangle
 import java.util.Collections.emptyList
 
-fun main() {
+fun main(args: Array<String>) {
+    if (args.isNotEmpty()) println("Hello, ${args[0]}!") else println("Hello, Kotlin!")
 //    for (i in 0..100) {
 //        println(fizzBuzz(i))
 //    }
